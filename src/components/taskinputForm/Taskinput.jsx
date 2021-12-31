@@ -35,7 +35,7 @@ const Taskinput = ({ addTask }) => {
                     addTask(uuidv4(), title, description, new Date());
                 }}
             >
-                Speichern
+                Save
             </Button>
         </Form>
     )

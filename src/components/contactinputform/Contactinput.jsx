@@ -54,7 +54,7 @@ const Contactinput = ({ addContact }) => {
                     addContact(uuidv4(), name, address, email, tel, mob);
                 }}
             >
-                Speichern
+                Save
             </Button>
         </Form>
     )
