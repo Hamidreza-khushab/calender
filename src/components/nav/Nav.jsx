@@ -2,7 +2,6 @@ import { React, useState } from 'react'
 import { Navbar, Container, Button, Nav, Form, FormControl } from "react-bootstrap";
 import Contact from '../contact/Contact';
 import Task from '../task/Task'
-import './Nav.css'
 
 const Navapp = ({ addTask, addContact }) => {
     const [showTask, setshowTask] = useState(false)
@@ -36,7 +35,7 @@ const Navapp = ({ addTask, addContact }) => {
             <Task
                 showTask={showTask}
                 hideModaltask={() => setshowTask(false)}
-                addTask={(id, title, description, date) => addTask(id, title, description, date)}
+                addTask={(id, title, estimateDo, description, date) => addTask(id, title, estimateDo, description, date)}
             />
             <Contact
                 showContact={showContact}

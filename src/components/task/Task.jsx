@@ -14,7 +14,7 @@ const Task = ({ addTask, showTask, hideModaltask }) => {
             </Modal.Header>
             <Modal.Body>
                 <Taskinput
-                    addTask={(id, title, description, date) => addTask(id, title, description, date)}
+                    addTask={(id, title, estimateDo, description, date) => addTask(id, title, estimateDo, description, date)}
                 />
             </Modal.Body>
         </Modal >

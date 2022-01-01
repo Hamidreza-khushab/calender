@@ -9,7 +9,7 @@ const Contactinput = ({ addContact }) => {
     const [mob, setMob] = useState("");
     return (
         <Form>
-            <Form.Group className="mb-3" controlId="formBasicEmail">
+            <Form.Group className="mb-3" >
                 <Form.Label>Name</Form.Label>
                 <Form.Control
                     type="text"

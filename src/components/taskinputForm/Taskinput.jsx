@@ -4,10 +4,11 @@ import { v4 as uuidv4 } from "uuid";
 
 const Taskinput = ({ addTask }) => {
     const [title, setTitle] = useState("");
+    const [estimateDo, setEstimateDo] = useState("");
     const [description, setDescription] = useState("");
     return (
         <Form>
-            <Form.Group className="mb-3" controlId="formBasicEmail">
+            <Form.Group className="mb-3" >
                 <Form.Label>Title</Form.Label>
                 <Form.Control
                     type="text"
@@ -15,9 +16,13 @@ const Taskinput = ({ addTask }) => {
                     value={title}
                     onChange={(event) => setTitle(event.target.value)}
                 />
-            </Form.Group>
-
-            <Form.Group className="mb-3" controlId="formBasicPassword">
+                <Form.Label>Estimate the time to do</Form.Label>
+                <Form.Control
+                    type="date"
+                    placeholder="dd-mm-yyyy"
+                    value={estimateDo}
+                    onChange={(event) => setEstimateDo(event.target.value)}
+                />
                 <Form.Label>Description</Form.Label>
                 <Form.Control
                     as="textarea"
@@ -32,7 +37,7 @@ const Taskinput = ({ addTask }) => {
                 type="submit"
                 onClick={(event) => {
                     event.preventDefault();
-                    addTask(uuidv4(), title, description, new Date());
+                    addTask(uuidv4(), title, estimateDo, description, new Date());
                 }}
             >
                 Save
